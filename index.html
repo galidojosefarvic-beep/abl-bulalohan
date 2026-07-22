@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABL Bulalohan — Authentic Bulalo in Jagna, Bohol</title>
+    <meta name="description" content="ABL Bulalohan — Jagna, Bohol's beloved home of authentic slow-simmered Bulalo. Dine-in & takeout. 5.0 star rated." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== CSS ===== */
+        :root {
+            --charcoal: #1A1410;
+            --charcoal-light: #2A201A;
+            --gold: #C9A84C;
+            --gold-soft: #DBC06A;
+            --gold-light: #EDE0C0;
+            --cream: #FAF5EE;
+            --bone: #F0EBE0;
+            --coral: #D96C4A;
+            --coral-deep: #B84A2A;
+            --muted: #7A6A5A;
+            --muted-light: #B0A090;
+            --white: #FFFFFF;
+            --shadow: 0 20px 60px rgba(26, 20, 16, 0.2);
+            --radius: 6px;
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Inter', sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--sans);
+            background: var(--cream);
+            color: #1A1410;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+        .btn-gold:hover {
+            background: var(--gold-soft);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--charcoal);
+        }
+        .btn-outline-dark {
+            background: transparent;
+            border: 2px solid var(--charcoal);
+            color: var(--charcoal);
+        }
+        .btn-outline-dark:hover {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+        .section-title em {
+            font-style: italic;
+            color: var(--coral);
+        }
+        .eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .eyebrow.light {
+            color: var(--gold-soft);
+        }
+        .lead {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 48ch;
+        }
+        .center {
+            text-align: center;
+        }
+        .center .lead {
+            margin: 0 auto;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-l {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal-l.in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-r {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal-r.in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== TOPBAR ===== */
+        .topbar {
+            background: var(--charcoal);
+            color: var(--muted-light);
+            font-size: 0.75rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .topbar a {
+            color: var(--muted-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s;
+        }
+        .topbar a:hover {
+            color: var(--white);
+        }
+        .topbar svg {
+            width: 16px;
+            height: 16px;
+        }
+        .badge-direct {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 2px 12px;
+            border-radius: 2px;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(26, 20, 16, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+        .logo span {
+            display: block;
+            font-family: var(--sans);
+            font-size: 0.5rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold-soft);
+            margin-top: -2px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--white);
+        }
+        .nav-links .nav-cta {
+            padding: 8px 20px;
+            font-size: 0.65rem;
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .burger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--charcoal);
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+        }
+        .mobile-menu.open {
+            transform: translateY(0);
+            display: flex;
+        }
+        .mobile-menu a {
+            color: var(--white);
+            font-size: 1.3rem;
+            font-family: var(--serif);
+        }
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        @media (max-width: 850px) {
+            .nav-links {
+                display: none;
+            }
+            .burger {
+                display: flex;
+            }
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1A1410 0%, #2A201A 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.25;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            padding: 80px 24px;
+        }
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-rating .stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.05;
+            max-width: 14ch;
+        }
+        .hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+        .hero-sub {
+            max-width: 44ch;
+            color: var(--muted-light);
+            font-size: 1.05rem;
+            margin: 12px 0 24px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+        .about-text .lead {
+            color: #2A201A;
+            font-size: 1.1rem;
+        }
+        .about-points {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        .about-points li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .about-points li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .about-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 20px;
+        }
+        .about-stats .num {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--coral);
+        }
+        .about-stats .num sup {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+        .about-stats .label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+        }
+        @media (max-width: 800px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== MENU ===== */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .menu-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+        .menu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .menu-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .menu-card h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .menu-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin: 8px 0 12px;
+        }
+        .menu-card .price {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--coral);
+        }
+        .menu-card .tag {
+            display: inline-block;
+            background: var(--gold-light);
+            color: var(--charcoal);
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 2px 12px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 900px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+        .gallery-item .cap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: linear-gradient(to top, rgba(26, 20, 16, 0.8), transparent);
+            color: var(--white);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        @media (max-width: 800px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== REVIEWS ===== */
+        .review-slider {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 32px 36px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .review-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .review-slide {
+            flex: 0 0 100%;
+            padding: 4px 0;
+        }
+        .review-slide .mark {
+            font-family: var(--serif);
+            font-size: 3rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .review-slide .text {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #2A201A;
+            margin: 8px 0 12px;
+        }
+        .review-slide .stars {
+            color: var(--gold);
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+        .review-slide .who {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+        .review-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .review-controls button {
+            background: none;
+            border: 1px solid var(--bone);
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .review-controls button:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .review-controls .dots {
+            display: flex;
+            gap: 8px;
+        }
+        .review-controls .dots button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: var(--bone);
+            padding: 0;
+            cursor: pointer;
+        }
+        .review-controls .dots button.active {
+            background: var(--gold);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .contact-info .item {
+            display: flex;
+            gap: 14px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .contact-info .item svg {
+            width: 22px;
+            height: 22px;
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .contact-info .item h4 {
+            font-family: var(--serif);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        .contact-info .item p,
+        .contact-info .item a {
+            font-size: 0.85rem;
+            color: var(--muted-light);
+        }
+        .contact-info .item a:hover {
+            color: var(--gold-soft);
+        }
+        .contact-form {
+            background: var(--white);
+            color: #1A1410;
+            padding: 32px 28px;
+            border-radius: var(--radius);
+        }
+        .contact-form h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .contact-form .sub {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+        .contact-form .field {
+            margin-bottom: 14px;
+        }
+        .contact-form .field label {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+        .contact-form .field input,
+        .contact-form .field textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--bone);
+            border-radius: var(--radius);
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            background: var(--cream);
+            transition: border-color 0.3s;
+        }
+        .contact-form .field input:focus,
+        .contact-form .field textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        .contact-form .field textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .contact-form .field .err {
+            color: var(--coral);
+            font-size: 0.7rem;
+            display: none;
+        }
+        .contact-form .field.invalid .err {
+            display: block;
+        }
+        .contact-form .field.invalid input,
+        .contact-form .field.invalid textarea {
+            border-color: var(--coral);
+        }
+        .contact-form .note {
+            font-size: 0.7rem;
+            color: var(--muted);
+            margin-top: 12px;
+            text-align: center;
+        }
+        @media (max-width: 800px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== LOCATION ===== */
+        .location-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .loc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin: 16px 0;
+        }
+        .loc-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--bone);
+            font-size: 0.85rem;
+        }
+        .loc-list li span:first-child {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2A201A;
+        }
+        .loc-list li span:first-child svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+        .loc-list li span:last-child {
+            color: var(--muted);
+            font-weight: 500;
+        }
+        .map-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+        }
+        .map-card iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(0.2);
+        }
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 18px;
+            background: linear-gradient(to top, rgba(26, 20, 16, 0.9), transparent);
+            color: var(--white);
+        }
+        .map-overlay h4 {
+            font-family: var(--serif);
+            font-size: 1rem;
+        }
+        .map-overlay p {
+            font-size: 0.75rem;
+            color: var(--muted-light);
+        }
+        @media (max-width: 900px) {
+            .location-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0C0806;
+            color: var(--muted-light);
+            padding: 50px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer-grid h4 {
+            color: var(--gold-soft);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .footer-grid p,
+        .footer-grid li {
+            font-size: 0.85rem;
+            color: var(--muted-light);
+        }
+        .footer-grid li {
+            padding: 4px 0;
+        }
+        .footer-grid a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            font-size: 0.7rem;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        @media (max-width: 800px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(120%);
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            z-index: 300;
+            font-size: 0.85rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease;
+            border-left: 3px solid var(--gold);
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            background: var(--gold);
+            color: var(--charcoal);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .to-top:hover {
+            transform: translateY(-4px);
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .lightbox.open {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: var(--radius);
+            object-fit: contain;
+        }
+        .lightbox .lb-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: var(--white);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.5rem;
+        }
+        .lightbox .lb-close:hover {
+            background: rgba(255, 255, 255, 0.16);
+        }
+        .lightbox .lb-cap {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 6px 18px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOPBAR ===== -->
+    <div class="topbar">
+        <div class="container">
+            <a href="tel:+639123456789">📞 0912 345 6789</a>
+            <div>
+                <span style="margin-right:16px;">📍 Bohol Circumferential Rd, Jagna, Bohol</span>
+                <span class="badge-direct">⭐ 5.0 · 7 Reviews</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo">ABL Bulalohan<span>Jagna · Bohol</span></a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+                <button class="btn btn-gold nav-cta" id="bookBtn">Order Now</button>
+            </nav>
+            <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose">✕</button>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-gold" id="mobileBookBtn">Order Now</button>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1400&q=80" alt="ABL Bulalohan - Authentic Bulalo">
+        </div>
+        <div class="container">
+            <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span><strong>5.0</strong> · 7 reviews</span>
+            </div>
+            <h1>ABL <em>Bulalohan</em></h1>
+            <p class="hero-sub">Jagna's beloved home of authentic slow-simmered Bulalo — where rich bone marrow broth, sizzling platters, and warm Filipino hospitality come together.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-gold">View Our Menu</a>
+                <button class="btn btn-outline" id="heroBookBtn">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-image reveal-l">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=750&fit=crop" alt="ABL Bulalohan - Authentic Filipino Food" />
+            </div>
+            <div class="about-text reveal-r">
+                <span class="eyebrow">Our Story</span>
+                <h2 class="section-title">The art of the <em>slow simmer</em></h2>
+                <p class="lead">At ABL Bulalohan, we believe that great food takes time. Our Bulalo is simmered for hours until the bone marrow melts into the broth, creating a rich, savory experience that keeps our guests coming back.</p>
+                <ul class="about-points">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Slow-simmered Bulalo with bone marrow</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Sizzling platters and authentic Filipino dishes</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Warm, welcoming atmosphere in Jagna, Bohol</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dine-in and takeout available</li>
+                </ul>
+                <div class="about-stats">
+                    <div><span class="num">5.0<sup>★</sup></span><span class="label">Rating</span></div>
+                    <div><span class="num">7<sup>+</sup></span><span class="label">Reviews</span></div>
+                    <div><span class="num">2019<sup></sup></span><span class="label">Established</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="section" id="menu" style="background:var(--bone);">
+        <div class="container">
+            <div class="center reveal">
+                <span class="eyebrow">Our Menu</span>
+                <h2 class="section-title">Flavors that <em>bring you home</em></h2>
+                <p class="lead" style="margin:0 auto;">Each dish is prepared with care, using only the freshest ingredients and time-honored recipes.</p>
+            </div>
+            <div class="menu-grid" style="margin-top:40px;" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section" id="gallery" style="background:var(--charcoal);color:var(--white);">
+        <div class="container">
+            <div class="center reveal">
+                <span class="eyebrow light">The Gallery</span>
+                <h2 class="section-title" style="color:var(--white);">A taste of <em style="color:var(--gold);">ABL</em></h2>
+            </div>
+            <div class="gallery-grid" style="margin-top:40px;" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section" id="reviews">
+        <div class="container">
+            <div class="center reveal">
+                <span class="eyebrow">Guest Reviews</span>
+                <h2 class="section-title">What our <em>guests say</em></h2>
+            </div>
+            <div class="review-slider reveal" id="reviewSlider">
+                <div class="review-track" id="reviewTrack"></div>
+                <div class="review-controls">
+                    <button id="reviewPrev">‹</button>
+                    <div class="dots" id="reviewDots"></div>
+                    <button id="reviewNext">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="section" id="location">
+        <div class="container location-wrap">
+            <div class="reveal-l">
+                <span class="eyebrow">Find Us</span>
+                <h2 class="section-title">Come visit <em>us</em></h2>
+                <p class="lead">Located along the Bohol Circumferential Road in Jagna, we're easy to find and ready to serve you.</p>
+                <ul class="loc-list">
+                    <li><span>📍 Address</span><span>Bohol Circumferential Rd, Jagna, Bohol</span></li>
+                    <li><span>🕐 Hours</span><span>10:00 AM – 9:00 PM Daily</span></li>
+                    <li><span>📞 Phone</span><span>0912 345 6789</span></li>
+                    <li><span>🍽️ Service</span><span>Dine-in · Takeout</span></li>
+                </ul>
+                <a href="https://www.google.com/maps/search/?api=1&query=ABL+Bulalohan+Jagna+Bohol" target="_blank" class="btn btn-gold" style="margin-top:12px;">Get Directions</a>
+            </div>
+            <div class="map-card reveal-r">
+                <iframe src="https://www.google.com/maps?q=ABL+Bulalohan+Jagna+Bohol&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-overlay">
+                    <h4>ABL Bulalohan</h4>
+                    <p>Bohol Circumferential Rd, Jagna, Bohol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="reveal-l">
+                <span class="eyebrow light">Contact Us</span>
+                <h2 class="section-title" style="color:var(--white);">Get in <em style="color:var(--gold);">touch</em></h2>
+                <p class="lead" style="color:var(--muted-light);margin-bottom:20px;">Have questions, special requests, or want to place an order? Reach out to us anytime.</p>
+                <div class="contact-info">
+                    <div class="item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+                        <div><h4>Phone</h4><p><a href="tel:+639123456789">0912 345 6789</a></p></div>
+                    </div>
+                    <div class="item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div><h4>Address</h4><p>Bohol Circumferential Rd, Jagna, Bohol</p></div>
+                    </div>
+                    <div class="item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                        <div><h4>Hours</h4><p>10:00 AM – 9:00 PM Daily</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form reveal-r">
+                <h3>Send us a message</h3>
+                <p class="sub">We'll get back to you as soon as possible.</p>
+                <form id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="cName">Full name</label>
+                        <input type="text" id="cName" placeholder="Juan Dela Cruz" />
+                        <span class="err">Please enter your name.</span>
+                    </div>
+                    <div class="field">
+                        <label for="cEmail">Email</label>
+                        <input type="email" id="cEmail" placeholder="you@example.com" />
+                        <span class="err">Please enter a valid email.</span>
+                    </div>
+                    <div class="field">
+                        <label for="cMessage">Message</label>
+                        <textarea id="cMessage" placeholder="Your order, special requests, or inquiries…"></textarea>
+                        <span class="err">Please write a short message.</span>
+                    </div>
+                    <button class="btn btn-gold" type="submit" style="width:100%;">Send Message</button>
+                    <p class="note">Your details are used only to answer your inquiry.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="font-size:1.1rem;color:var(--white);margin-bottom:10px;">ABL Bulalohan<span style="color:var(--gold-soft);">Jagna · Bohol</span></div>
+                    <p>The art of the slow simmer — authentic Bulalo and Filipino favorites in the heart of Jagna, Bohol.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+639123456789">0912 345 6789</a></li>
+                        <li><a href="#location">Find Us</a></li>
+                        <li><a href="#contact">Send a Message</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Visit Us</h4>
+                    <p style="font-size:0.85rem;margin-bottom:12px;">Bohol Circumferential Rd, Jagna, Bohol</p>
+                    <p style="font-size:0.85rem;">Open daily · 10:00 AM – 9:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> ABL Bulalohan. All rights reserved.</span>
+                <span>Jagna, Bohol, Philippines</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="to-top" id="toTop">↑</button>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close">✕</button>
+        <img src="" alt="" />
+        <div class="lb-cap"></div>
+    </div>
+
+    <script>
+        // ============================================================
+        // DATA
+        // ============================================================
+        const MENU_DATA = [
+            { icon: '🍲', name: 'Bulalo', desc: 'Tender beef shanks, bone marrow, and vegetables in a rich, slow-simmered broth.',
+                price: '₱250', tag: 'Signature' },
+            { icon: '🔥', name: 'Sizzling Bulalo', desc: 'Our signature bulalo served sizzling on a hot platter with mushroom sauce.',
+                price: '₱280', tag: 'Popular' },
+            { icon: '🍗', name: 'Crispy Pata', desc: 'Deep-fried pork leg with a crispy skin and tender meat inside.',
+                price: '₱350', tag: 'Best Seller' },
+            { icon: '🍤', name: 'Garlic Butter Shrimp', desc: 'Succulent shrimp sautéed in garlic butter with a hint of spice.',
+                price: '₱280', tag: 'Seafood' },
+            { icon: '🥘', name: 'Kare-Kare', desc: 'Oxtail and vegetables in a rich peanut sauce, served with bagoong.',
+                price: '₱300', tag: 'Classic' },
+            { icon: '🍚', name: 'Garlic Rice', desc: 'Fried rice with crispy garlic bits — the perfect companion to any dish.',
+                price: '₱60', tag: 'Side' }
+        ];
+
+        const GALLERY_DATA = [
+            { cap: 'Bulalo',
+            img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=300&h=300&fit=crop' },
+            { cap: 'Crispy Pata',
+            img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=300&h=300&fit=crop' },
+            { cap: 'Sizzling Platter',
+            img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&h=300&fit=crop' },
+            { cap: 'Garlic Rice',
+            img: 'https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=300&h=300&fit=crop' },
+            { cap: 'Kare-Kare',
+            img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=300&fit=crop' },
+            { cap: 'Fresh Ingredients',
+            img: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=300&h=300&fit=crop' }
+        ];
+
+        const REVIEWS_DATA = [
+            { text: 'The bulalo was absolutely amazing! Rich broth, tender meat, and the bone marrow was perfect. Definitely the best in Jagna!',
+                who: 'Maria C. · Google review' },
+            { text: 'My family and I had a wonderful dinner at ABL. The sizzling bulalo is a must-try! The staff were friendly and welcoming.',
+                who: 'Ramon S. · Google review' },
+            { text: 'As a local, this is my go-to place for authentic bulalo. The serving is generous and the flavors are on point.',
+                who: 'Anna P. · Google review' }
+        ];
+
+        // ============================================================
+        // RENDER FUNCTIONS
+        // ============================================================
+        function renderMenu() {
+            const grid = document.getElementById('menuGrid');
+            grid.innerHTML = '';
+            MENU_DATA.forEach((item, index) => {
+                const el = document.createElement('div');
+                el.className = 'menu-card reveal';
+                el.style.transitionDelay = (index * 80) + 'ms';
+                el.innerHTML = `
+                            <span class="icon">${item.icon}</span>
+                            <span class="tag">${item.tag}</span>
+                            <h3>${item.name}</h3>
+                            <p>${item.desc}</p>
+                            <div class="price">${item.price}</div>
+                        `;
+                grid.appendChild(el);
+            });
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = '';
+            GALLERY_DATA.forEach((g, i) => {
+                const el = document.createElement('div');
+                el.className = 'gallery-item reveal';
+                el.style.transitionDelay = (i * 60) + 'ms';
+                el.innerHTML = `
+                            <img src="${g.img}" alt="${g.cap}" loading="lazy">
+                            <div class="cap">${g.cap}</div>
+                        `;
+                el.addEventListener('click', () => openLightbox(g.img, g.cap));
+                grid.appendChild(el);
+            });
+        }
+
+        function renderReviews() {
+            const track = document.getElementById('reviewTrack');
+            const dots = document.getElementById('reviewDots');
+            track.innerHTML = '';
+            dots.innerHTML = '';
+            REVIEWS_DATA.forEach((r, i) => {
+                const el = document.createElement('div');
+                el.className = 'review-slide';
+                el.innerHTML = `
+                            <div class="mark">"</div>
+                            <p class="text">${r.text}</p>
+                            <div class="stars">★★★★★</div>
+                            <p class="who">${r.who}</p>
+                        `;
+                track.appendChild(el);
+                const dot = document.createElement('button');
+                dot.dataset.index = i;
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToReview(i));
+                dots.appendChild(dot);
+            });
+        }
+
+        // ============================================================
+        // REVIEW SLIDER
+        // ============================================================
+        let currentReview = 0;
+        const totalReviews = REVIEWS_DATA.length;
+
+        function goToReview(index) {
+            if (index < 0) index = totalReviews - 1;
+            if (index >= totalReviews) index = 0;
+            currentReview = index;
+            const track = document.getElementById('reviewTrack');
+            track.style.transform = `translateX(-${index * 100}%)`;
+            document.querySelectorAll('#reviewDots button').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+        }
+
+        document.getElementById('reviewPrev').addEventListener('click', () => goToReview(currentReview - 1));
+        document.getElementById('reviewNext').addEventListener('click', () => goToReview(currentReview + 1));
+
+        // ============================================================
+        // LIGHTBOX
+        // ============================================================
+        const lightbox = document.getElementById('lightbox');
+
+        function openLightbox(src, cap) {
+            lightbox.querySelector('img').src = src;
+            lightbox.querySelector('.lb-cap').textContent = cap;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        lightbox.querySelector('.lb-close').addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // ============================================================
+        // MOBILE MENU
+        // ============================================================
+        const burgerBtn = document.getElementById('burgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        burgerBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+        mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        mobileMenu.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        });
+
+        // ============================================================
+        // REVEAL
+        // ============================================================
+        const revealIO = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    revealIO.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => revealIO.observe(el));
+
+        // ============================================================
+        // TOAST
+        // ============================================================
+        const toastEl = document.getElementById('toast');
+        let toastTimer;
+
+        function showToast(msg) {
+            toastEl.textContent = msg;
+            toastEl.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toastEl.classList.remove('show'), 3200);
+        }
+
+        // ============================================================
+        // CONTACT FORM
+        // ============================================================
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            const fields = [
+                { id: 'cName', err: 'Please enter your name.' },
+                { id: 'cEmail', err: 'Please enter a valid email.', test: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+                { id: 'cMessage', err: 'Please write a short message.' }
+            ];
+            fields.forEach(f => {
+                const el = document.getElementById(f.id);
+                const parent = el.closest('.field');
+                const val = el.value.trim();
+                let ok = val.length > 0;
+                if (f.test) ok = f.test.test(val);
+                parent.classList.toggle('invalid', !ok);
+                if (!ok) valid = false;
+            });
+            if (!valid) return;
+            showToast('Message sent! We\'ll get back to you soon.');
+            document.getElementById('cName').value = '';
+            document.getElementById('cEmail').value = '';
+            document.getElementById('cMessage').value = '';
+        });
+
+        // ============================================================
+        // BOOK / ORDER
+        // ============================================================
+        document.querySelectorAll('#bookBtn, #heroBookBtn, #mobileBookBtn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                showToast('Thank you! We\'ll contact you to confirm your order.');
+            });
+        });
+
+        // ============================================================
+        // BACK TO TOP
+        // ============================================================
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            toTop.classList.toggle('visible', window.scrollY > 600);
+        });
+        toTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ============================================================
+        // YEAR
+        // ============================================================
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        renderMenu();
+        renderGallery();
+        renderReviews();
+
+        console.log('ABL Bulalohan — Fully Functional');
+    </script>
+</body>
+</html>
